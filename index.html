@@ -1,11 +1,271 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>TVT2025 项目主页</title>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors">
+    <meta property="og:title" content="Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors" />
+    <meta property="og:description"
+        content="Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors." />
+    <meta property="og:url" content="https://your-project-page.github.io" />
+    <meta property="og:image" content="media/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:title" content="Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors">
+    <meta name="twitter:description"
+        content="Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors">
+    <meta name="twitter:image" content="media/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LECTP: Multi-CAV Cooperative Trajectory Planning">
+    <meta name="twitter:description"
+        content="Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors">
+    <meta name="twitter:image" content="media/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LECTP: Lightweight and Efficient Cooperative Trajectory Planning for Multi-CAV at Unsignalized Intersections
+    </title>
+    <link rel="icon" type="image/x-icon" href="media\images\">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="media/css/bulma.min.css">
+    <link rel="stylesheet" href="media/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="media/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="media/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="media/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="media/js/fontawesome.all.min.js"></script>
+    <script src="media/js/bulma-carousel.min.js"></script>
+    <script src="media/js/bulma-slider.min.js"></script>
+    <script src="media/js/index.js"></script>
 </head>
+
 <body>
-    <h1>Welcome to TVT2025</h1>
-    <p>这是我的第一个 GitHub Pages 网页。</p>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 has-text-centered">
+                            Safety-Enhanced Trajectory Planning for Autonomous Vehicles: Optimization Based on Dynamic Safety Corridors
+                        </h1>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body has-text-centered"> <!-- Center the content -->
+                <video poster="" id="tree" autoplay controls muted loop style="margin: 0 auto; display: block; width: 80%; height: 600px;">
+                    <!-- Your video here -->
+                    <source src="media/videos/agx_test.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle" style="text-align: justify; text-justify: inter-word;">
+                    Two Agilex Limo Pro platforms were used to simulate intelligent connected vehicles in a real-world scenario. 
+                    One platform served as the ego vehicle equipped with the algorithm, while the other acted as an obstacle vehicle. 
+                    The testing was conducted on a circular roadway with a width of 0.9 meters, allowing two vehicles to drive side by 
+                    side and providing space for lane changing and overtaking maneuvers. For position tracking, we utilized the 
+                    FZMOTION MOTION CAPTURE SYSTEM. The entire testing system was based on ROS (Robot Operating System) and deployed 
+                    on an Ubuntu 20.04 system. The vehicle dimensions were 0.32 meters in length and 0.20 meters in width, with a maximum 
+                    speed limit set to 0.7 m/s.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- End teaser video -->
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop" style="font-size: 1.3rem;">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            In complex traffic environments, autonomous vehicles must simultaneously cope with multi-source potential
+                            risks arising from road boundaries, lane structures, and both
+                            dynamic and static traffic participants. These risks interact
+                            and overlap across spatial and temporal dimensions, increasing
+                            the safety challenges of trajectory planning. Existing methods
+                            face limitations in handling high-dimensional obstacle avoidance
+                            constraints and dynamic environmental factors, often resulting
+                            in degraded trajectory quality and reduced safety. To overcome
+                            these challenges, this paper proposes a safety-enhanced trajectory
+                            planning method, which improves trajectory quality through the
+                            recursive generation of the Spatio-Temporal Risk Map (STRM)
+                            and the Dynamic Safety Corridor (DSC). First, based on potential
+                            field theory, a risk modeling approach is applied to various
+                            traffic elements, such as road boundaries, lane markings, and
+                            both dynamic and static obstacles, to generate the STRM,
+                            thereby mapping the traffic environment information into a
+                            unified risk space. Subsequently, a method for constructing the
+                            DSC is proposed, considering boundary risk thresholds. This
+                            approach effectively decouples the relationship between complex
+                            environmental factors and driving tasks, thereby simplifying
+                            collision constraints. Finally, an Optimal Control Problem (OCP)
+                            is formulated, taking into account factors such as trajectory
+                            smoothness, comfort, and collision risk, in order to generate
+                            optimized trajectories that meet both safety and feasibility requirements. The effectiveness of the proposed method in various
+                            multi-lane scenarios was evaluated through simulation experiments. The results show that the proposed method significantly
+                            enhances the safety of trajectory planning, especially in highly
+                            dynamic and high-risk environments..
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+
+    <section class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title is-3">Motion Planning System Architecture</h2>
+                <figure class="image" style="max-width: 80%; margin: 0 auto;">
+                    <img src="media\images\framework.png" alt="Architecture">
+                </figure>
+                <p class="mt-3">
+                    <strong>Fig. 2:</strong> The logical framework of the safety-enhanced
+                    trajectory planning method proposed in this paper
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title is-3">Performance comparison of the proposed method and baseline planners.</h2>
+                <figure class="image" style="max-width: 80%; margin: 0 auto;">
+                    <img src="media/images/biao3.png" alt="Computation Time Growth with Vehicle Scale">
+                </figure>
+                <p class="mt-3 has-text-justified" style="font-size: 1.3rem;">
+                    Table <strong>Ⅲ</strong> The performance is quantitatively evaluated using four key  metrics: Success rate, 
+                    defined as the ratio of successful plan-ning executions with collision-free results over all planning  attempts 
+                    during motion, which reflects the overall safety; Average speed, which characterizes the execution efficiency 
+                    and traffic throughput; Average acceleration, used to describe the frequency of longitudinal dynamic adjustments; 
+                    Average jerk, i.e., the derivative of acceleration, which measures the smoothness of vehicle motion and passenger comfort. 
+                    These four metrics jointly characterize the comprehensive performance of the planning algorithms in terms of safety, 
+                    traffic efficiency, and driving comfort..
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title is-3">The planning results of different planning methods</h2>
+                <figure class="image" style="max-width: 80%; margin: 0 auto;">
+                    <img src="media/images/12.png" alt="Computation Time Growth with Vehicle Scale">
+                </figure>
+                <p class="mt-3 has-text-justified" style="font-size: 1.3rem;">
+                    Figure <strong>12</strong> The planning results of different planning methods, displayed in terms of trajectories, 
+                    Speed v, Acceleration a, Jerk jerk, Steering angle ϕ, and Steering rate.
+                </p>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title is-3">Real-World Test</h2>
+                <figure class="image" style="max-width: 80%; margin: 0 auto;">
+                    <img src="media\images\shichea.png" alt="Architecture">
+                </figure>
+                <p class="mt-3">
+                    <strong>Fig. 14:</strong> The setup mimics a bidirectional four-lane intersection with six AgileX
+                    LIMO Pro robotic platforms representing intelligent connected vehicles. Among them, four vehicles
+                    are assigned left-turn tasks and two are assigned straight-driving tasks. Each LIMO communicates in
+                    real-time with a simulated roadside computation unit carried by a quadrotor UAV. The LIMO robots
+                    send task waypoints and real-time state information to the UAV, which runs the proposed
+                    collaborative spatiotemporal trajectory optimization algorithm and returns parameterized
+                    trajectories to each vehicle for execution. The LIMOs follow the generated trajectories using
+                    Ackermann steering mode. For precise vehicle localization, we employ the FZMotion Motion Capture
+                    System.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title is-3">Physical experiment results</h2>
+                <figure class="image" style="max-width: 80%; margin: 0 auto;">
+                    <img src="media\images\shicheb.png" alt="Architecture">
+                </figure>
+                <p class="mt-3">
+                    <strong>Fig. 15:</strong> The top image shows snapshots from 70 to 74 seconds of the ego vehicle 
+                    performing an overtaking maneuver in the circular roadway, demonstrating that the ego vehicle overtakes 
+                    the obstacle vehicle from the left lane. The middle image illustrates the real-time risk variation and 
+                    corresponding safety corridor as the ego vehicle moves, where the contour colors of the ego and obstacle 
+                    vehicles are independent of the risk color. The boundaries of the safety corridor are dynamically adjusted 
+                    based on the ego vehicle's speed and the risk threshold, ensuring the safety of the ego vehicle during the 
+                    overtaking process. As the ego vehicle's speed increases, the safety corridor contracts in both the lateral 
+                    and longitudinal directions, effectively distancing the ego vehicle from the obstacle during the overtaking 
+                    maneuver. The bottom image presents the vehicle path and variations in longitudinal and lateral velocities 
+                    within a 90-second time frame, with a speed of zero between 40s and 50s due to manual adjustments to the position, 
+                    ensuring that the obstacle vehicle remains in front of the ego vehicle to better serve as an interference. 
+                    Additionally, the minimum distance chart shows the relative distance between the ego vehicle and the obstacle over time, 
+                    demonstrating that the distance between the ego and the obstacle is consistently maintained within a safe range throughout 
+                    the experiment, even during the overtaking maneuver, thus ensuring no collision due to excessive proximity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the
+                            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
+                                Academic Project Page Template
+                            </a>,
+                            which was adopted from the
+                            <a href="https://nerfies.github.io" target="_blank">
+                                Nerfies
+                            </a> project page.
+
+                            This website is licensed under a
+                            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                                Creative Commons Attribution-ShareAlike 4.0 International License
+                            </a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
